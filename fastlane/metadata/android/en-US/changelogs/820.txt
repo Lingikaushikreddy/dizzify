@@ -1,0 +1,6 @@
+- downgrade  AGP to 8.11.1
+- rm more legacy home apps code
+- Separate out settings components (refactor)
+- Group all permission related fns in PermissionManager
+- Standardize animation access and rm old files
+- Reuse LauncherListItem for hidden apps and normal drawer
