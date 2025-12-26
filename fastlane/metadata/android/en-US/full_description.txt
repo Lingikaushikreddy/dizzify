@@ -1,4 +1,4 @@
-CCLauncher is a minimalist Android launcher designed to help reduce screen time and distractions due to all the apps present (like social media apps for example). Unlike traditional launchers, apps are hidden by default.
+Dizzify is a minimalist Android launcher designed to help reduce screen time and distractions due to all the apps present (like social media apps for example). Unlike traditional launchers, apps are hidden by default.
 
 Key Features:
 

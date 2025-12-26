@@ -27,7 +27,7 @@
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
 
     <application
-        android:name="app.launcher.LauncherApp"
+        android:name="app.dizzify.LauncherApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -42,7 +42,7 @@
         tools:ignore="UnusedAttribute">
 
         <activity
-            android:name="app.launcher.MainActivity"
+            android:name="app.dizzify.MainActivity"
             android:configChanges="uiMode"
             android:excludeFromRecents="true"
             android:exported="true"
@@ -73,7 +73,7 @@
 <!--        </receiver>-->
 
         <receiver
-            android:name="app.launcher.helper.PrivateSpaceReceiver"
+            android:name="app.dizzify.helper.PrivateSpaceReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.PROFILE_AVAILABLE" />

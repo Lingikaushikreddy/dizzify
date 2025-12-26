@@ -1,7 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
 import com.android.build.gradle.internal.api.ApkVariantOutputImpl
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.android.application)
@@ -14,8 +13,8 @@ plugins {
 }
 
 kotlin {
+    jvmToolchain(17)
     compilerOptions {
-        jvmTarget = JvmTarget.fromTarget("17")
         optIn.addAll(
             "androidx.compose.material3.ExperimentalMaterial3Api",
             "androidx.compose.foundation.ExperimentalFoundationApi",
@@ -27,17 +26,12 @@ kotlin {
 android {
     compileSdk = 36
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-
     defaultConfig {
-        applicationId = "app.cclauncher"
+        applicationId = "app.dizzify"
         minSdk = 24
         targetSdk = 36
         versionCode = 990
-        versionName = "v9.10.9"
+        versionName = "v1.0.0"
 
         androidResources {
             localeFilters += setOf("en", "ar", "de", "es-rES", "es-rUS", "fr", "hr", "hu", "in", "it", "ja", "pl", "pt-rBR", "ru-rRU", "sv", "tr", "uk", "zh")
@@ -61,35 +55,6 @@ android {
                 }
             }
             isUniversalApk = includeUniversalApk && enableApkSplits
-        }
-    }
-
-    applicationVariants.all {
-        val buildingApk = gradle.startParameter.taskNames.any { it.contains("assemble", ignoreCase = true) }
-        if (!buildingApk) return@all
-
-        val variant = this
-        outputs.all {
-            if (this is ApkVariantOutputImpl) {
-                val abiName = filters.find { it.filterType == "ABI" }?.identifier
-                val base = variant.versionCode
-
-                if (abiName != null) {
-                    // Split APKs get stable per-ABI version codes and names
-                    val abiVersionCode = when (abiName) {
-                        "x86" -> base - 3
-                        "x86_64" -> base - 2
-                        "armeabi-v7a" -> base - 1
-                        "arm64-v8a" -> base
-                        else -> base
-                    }
-                    versionCodeOverride = abiVersionCode
-                    outputFileName = "cclauncher-${variant.versionName}-${abiName}.apk"
-                } else {
-                    versionCodeOverride = base + 1
-                    outputFileName = "cclauncher-${variant.versionName}-universal.apk"
-                }
-            }
         }
     }
 
@@ -129,17 +94,18 @@ android {
         compose = true
     }
 
-    composeOptions {
-        kotlinCompilerExtensionVersion = "2.0.0"
-    }
-
-    namespace = "app.cclauncher"
+    namespace = "app.dizzify"
 
 
     dependenciesInfo {
         includeInApk = false
     }
 }
+
+apkDist {
+    artifactNamePrefix.set("dizzify")
+}
+
 
 // Configure all tasks that are instances of AbstractArchiveTask
 tasks.withType<AbstractArchiveTask>().configureEach {

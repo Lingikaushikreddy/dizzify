@@ -1,4 +1,4 @@
-package app.cclauncher
+package app.dizzify
 
 import android.app.Activity
 import android.os.Build

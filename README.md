@@ -1,9 +1,9 @@
 
-# CCLauncher - Minimalist Launcher
+# Dizzify - Minimalist Launcher
 
-[![F-Droid Version](https://img.shields.io/f-droid/v/app.cclauncher)](https://f-droid.org/packages/app.cclauncher/)
-[![GitHub Release](https://img.shields.io/github/v/release/mlm-games/cclauncher)](https://github.com/mlm-games/cclauncher/releases/latest)
-[![IzzyOnDroid](https://img.shields.io/endpoint?url=https://apt.izzysoft.de/fdroid/api/v1/shield/app.cclauncher)](https://apt.izzysoft.de/fdroid/index/apk/app.cclauncher)
+[![F-Droid Version](https://img.shields.io/f-droid/v/app.dizzify)](https://f-droid.org/packages/app.dizzify/)
+[![GitHub Release](https://img.shields.io/github/v/release/mlm-games/dizzify)](https://github.com/mlm-games/dizzify/releases/latest)
+[![IzzyOnDroid](https://img.shields.io/endpoint?url=https://apt.izzysoft.de/fdroid/api/v1/shield/app.dizzify)](https://apt.izzysoft.de/fdroid/index/apk/app.dizzify)
 
 A privacy-focused, minimalist Android launcher designed to reduce screen time by hiding apps by default. Rewritten in Kotlin with Jetpack Compose.
 
@@ -27,8 +27,8 @@ A privacy-focused, minimalist Android launcher designed to reduce screen time by
 
 ## Install
 
-[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/app.cclauncher)
-[<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" alt="Get it on IzzyOnDroid" height="80">](https://apt.izzysoft.de/fdroid/index/apk/app.cclauncher)
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/app.dizzify)
+[<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" alt="Get it on IzzyOnDroid" height="80">](https://apt.izzysoft.de/fdroid/index/apk/app.dizzify)
 
 ## Other Donation Methods
 

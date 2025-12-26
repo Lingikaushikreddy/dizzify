@@ -28,11 +28,11 @@
   public static final android.os.Parcelable$Creator *;
 }
 
--keep class app.launcher.data.settings.AppSettings { *; }
--keepclassmembers class app.launcher.data.settings.AppSettings { *; }
--keep @app.launcher.data.settings.Setting class * { *; }
+-keep class app.dizzify.data.settings.AppSettings { *; }
+-keepclassmembers class app.dizzify.data.settings.AppSettings { *; }
+-keep @app.dizzify.data.settings.Setting class * { *; }
 -keepclasseswithmembers class * {
-    @app.launcher.data.settings.Setting <fields>;
+    @app.dizzify.data.settings.Setting <fields>;
 }
 
 -keepattributes *Annotation*,EnclosingMethod,Signature,KotlinMetadata
@@ -43,17 +43,17 @@
 
 
 -keepattributes RuntimeVisibleAnnotations
--keepclassmembers class app.launcher.data.settings.AppSettings {
-    @app.launcher.data.settings.Setting *;
+-keepclassmembers class app.dizzify.data.settings.AppSettings {
+    @app.dizzify.data.settings.Setting *;
 }
 
 # Keep all Setting annotations
--keep @interface app.launcher.data.settings.Setting
+-keep @interface app.dizzify.data.settings.Setting
 -keepattributes *Annotation*
 
 # Keep all enum classes used in annotations
--keepclassmembers enum app.launcher.data.settings.SettingCategory { *; }
--keepclassmembers enum app.launcher.data.settings.SettingType { *; }
+-keepclassmembers enum app.dizzify.data.settings.SettingCategory { *; }
+-keepclassmembers enum app.dizzify.data.settings.SettingType { *; }
 
 # Keep all reflection metadata
 -keepattributes Signature, InnerClasses
@@ -61,11 +61,11 @@
 -keep class kotlin.reflect.** { *; }
 -keep class kotlin.jvm.internal.** { *; }
 
--keepclassmembers class app.launcher.data.settings.AppSettings {
+-keepclassmembers class app.dizzify.data.settings.AppSettings {
     <fields>;
     <methods>;
 }
 
--keep class app.launcher.data.settings.SettingsManager { *; }
+-keep class app.dizzify.data.settings.SettingsManager { *; }
 
--keep class app.cclauncher.ui.screens.SettingsScreenKt { *; }
+-keep class app.dizzify.ui.screens.SettingsScreenKt { *; }

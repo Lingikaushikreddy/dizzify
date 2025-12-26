@@ -27,9 +27,9 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  APP_NAME: 'CCLauncher'      
-  APP_SLUG: 'cclauncher'     
-  APPLICATION_ID: 'com.app.cclauncher'
+  APP_NAME: 'Dizzify'      
+  APP_SLUG: 'dizzify'     
+  APPLICATION_ID: 'app.dizzify'
 
   JAVA_VERSION: '21'
   JAVA_DISTRIBUTION: 'corretto'
@@ -156,9 +156,6 @@ jobs:
           status: completed
           whatsNewDirectory: fastlane/metadata/android
         continue-on-error: true
-      
-      - name: Clean before APK build
-        run: ./gradlew clean
       
       - name: Build APK splits
         env:
